@@ -1,3 +1,6 @@
+
+# Bandit OvertheWire linux fundementals and key takeaways
+
 Level 1 - 
 
 used pwd to find where I was in the filesystem
@@ -62,7 +65,7 @@ file is owned by user bandit7
 group bandit 6
 33 bytes in size 
 
-solutuion : we use the command find again here combining these 3 filters, also located anywhere in the server so we use / to denote this
+solution : we use the command find again here combining these 3 filters, also located anywhere in the server so we use / to denote this
             find / -type f -user bandit7 -group bandit 6 -size 33c
 
 Bmnnvf82KzQlfxgAI2d1zYbr1u9pr3E3
@@ -101,6 +104,12 @@ password is stored in data.txt and is one of the few human readable strings prec
 
 solution
 
+- use the strings command to find readable human strings in the file 
+
+- use the grep command with multiple == and locate the password as it follows a similar pattern
+
+
+
 B0s2khmbT9u0geKuOoVGW3JZKhndE3BG
 
 
@@ -131,12 +140,23 @@ Level 12-13
 File is a hexdump thats been repeatedly compressed
 
 Solution :
+
 - Reverse the Hexdump, use file to find outs its a .gz file, use mv to rename it and gzip to decompress,repeat the process to find out its a bzip2 file, decompress it using bzip2, find out its a tar file, rename it , extract using tar, we get data5.bin, where we use file to find out its a .tar file, so we repeat the process and get data6.bin, which is a bzip2, so we repeat and use bzip2 to extract it, which gives us data6 a tar file, we repeat the renaming and extract using tar, giving us data 8.bin, a gzip which we extract giving us data.tar, using tar we extract that and get data.txt which contains the password
+
+
+overall repeititon pattern : 
+
+- Use file to find out the filetype (names can be misleading)
+
+- use .mv to change the filetype if needed
+
+- Use the relevant tool to extract it (open Manual if confused)
+
 
 qQYQiHOBPR8zR61qxYqX45quvihF2uzk
 
-- Key takeaways , organise workspace for cleaner output
-- multiple filetypes
+- Key takeaway - organise workspace for cleaner output
+
 
 level 13-14
 
@@ -174,3 +194,4 @@ Level 15-16
 Password is found by submitting the current password to port 30001 using ssl 
 
 solution : ncat --ssl localhost 30001
+
