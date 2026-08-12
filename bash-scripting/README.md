@@ -13,6 +13,7 @@ Level 1: The Basics
 Mission: Create a directory named Arena and then inside it, create three files: warrior.txt, mage.txt, and archer.txt. List the contents of the Arena directory.
 
 
+<img width="717" height="93" alt="Screenshot 2026-08-12 at 19 20 00" src="https://github.com/user-attachments/assets/0e74474a-887c-4976-ab31-452e0461cc24" />
 
 
 
@@ -23,6 +24,11 @@ Mission: Create a directory named Arena and then inside it, create three files: 
 Level 2: Variables and Loops
 
 Mission: Create a script that outputs the numbers 1 to 10, one number per line.
+
+
+
+
+<img width="228" height="94" alt="Screenshot 2026-08-12 at 19 20 22" src="https://github.com/user-attachments/assets/1983778f-93aa-4ddd-8abb-d3f1e2887794" />
 
 
 
