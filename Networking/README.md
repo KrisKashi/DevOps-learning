@@ -6,6 +6,19 @@ Here you will find my learning journey mastering networking fundementals for clo
 
 A simple ngninx webapp, hosted on an AWS EC2 Linux instance with a custom domain purchased from cloudflare.
 
+
+
+
+
+<img width="1514" height="483" alt="Screenshot 2026-08-14 at 10 59 27" src="https://github.com/user-attachments/assets/49b44d82-6ed7-4508-b4d0-e7a4e969e675" />
+
+
+<img width="1191" height="164" alt="Screenshot 2026-08-14 at 13 06 19" src="https://github.com/user-attachments/assets/d08ba628-2ea0-4a14-9c71-723e59a0aee6" />
+
+
+
+
+
 Features:
 
 - EC2 Instance config with nginx web server
