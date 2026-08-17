@@ -1,6 +1,6 @@
 # What I did 
 
-Watched a short youtube tutorial to familiarise myself with docker basics.
+Watched a utorial to familiarise myself with docker basics.
 
 Conatiner - packages your code,environment,dependencies and everything else needed to run it 
 
