@@ -1,4 +1,4 @@
-<img width="218" height="150" alt="architecture-diagram" src="https://github.com/user-attachments/assets/2655ce82-0ba0-4a70-8316-24988cd63be0" />
+
 # AWS 
 
 Here you will find documentation regarding various AWS services presenting my learning journey of cloud fundementals, along with 2 hands on projects to showcase the services in a real time environment.
