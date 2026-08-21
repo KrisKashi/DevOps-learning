@@ -4,7 +4,7 @@ Create a custom VPC with one public and one private subnet, set up the correct r
 
 ## Architecture
 
-![Architecture diagram](./architecture-diagram-bastion.png)
+![Architecture diagram](./screenshots/architecture-diagram-bastion.png)
 
 ## Components
 

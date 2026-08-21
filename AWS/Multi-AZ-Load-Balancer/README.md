@@ -4,7 +4,7 @@ Deploy two EC2 instances behind an ALB. The ALB must handle all incoming traffic
 
 ## Architecture
 
-![Architecture diagram](./architecture-diagram-alb.png)
+![Architecture diagram](./screenshots/architecture-diagram-alb.png)
 
 ## Components
 
@@ -54,6 +54,6 @@ Deployed a load balancer which points to two ec2 instances to host different web
 ![Webpage response - instance A (Apache)](./screenshots/SERVER1.png)
 ![Webpage response - instance B (Nginx)](./screenshots/SERVER2.png)
 
-Same domain reaching the different servers via the load balancer
+-Same domain reaching the different servers via the load balancer
 
 </details>
