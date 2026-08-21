@@ -40,6 +40,11 @@ Elastic IPs for static services
 
 ## - Project 1 -
 
+
+
+<img width="900" height="1187" alt="architecture-diagram-bastion" src="https://github.com/user-attachments/assets/999e3dd1-94ba-463e-bb46-beda5a282f73" />
+
+
 Create a custom VPC with one public and one private subnet, set up the correct routing for internet access, and deploy EC2 instances across them.
 
 Result:
