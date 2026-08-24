@@ -5,11 +5,17 @@ This repository contains my progression and projects regarding terraform, from a
 # Structure
 
 terraform/
+
 ├── provider.tf                  # AWS provider + S3 remote backend config
+
 ├── main.tf                      # Root module, calls modules/ec2
+
 ├── modules/
+
 │   └── ec2/                     # Reusable EC2 module
+
 ├── wordpressdeployment/         # Assignment 1: full LAMP + WordPress via Terraform
+
 └── EC2_cloudinit/                # Assignment 2: EC2 + cloud-init YAML
 
 
@@ -70,7 +76,6 @@ markdown
 
 - Explore external secrets management using  AWS Secrets manager 
 
-- fully 
 
 
 
