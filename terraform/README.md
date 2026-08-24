@@ -38,9 +38,6 @@ Fully automated wordpress deployment which provisions an EC2 instance, configure
 Uses terraform to deploy an EC2 instance and an alternative startup script in the form of a cloudinit YAML file to setup an nginx webpage. Cloudinit is more declarative as we can reference things such as packages directly instead of the install commands.
 
 
-Same pattern — just point at the EC2_cloudinit/screenshots/ folder instead:
-
-markdown
 ## Terraform Apply
 ![Terraform apply output](EC2_cloudinit/screenshots/terraform-apply-output.png)
 
