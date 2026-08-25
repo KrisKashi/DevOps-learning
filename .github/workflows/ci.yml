@@ -1,0 +1,13 @@
+name: CoderCo Kristen CICD
+
+on: [push]
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+        - name: checkout code
+          uses: actions/checkout@v2
+        - name: testing workflow
+          run: echo Workflow Successful!
+            
