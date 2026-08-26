@@ -24,3 +24,15 @@ jobs:
     - name: Run ruff
       run: ruff check .
 
+    - name: Run application
+      run: python app.py
+      
+    - name: Build docker image from app
+      uses: docker/build-push-action@v7
+      with:
+        context: ./cicd/task1
+        push: false
+        tags: CIbuild:latest
+        
+    - name: run docker container
+      run: docker run CIbuild:latest     
