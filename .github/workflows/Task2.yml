@@ -34,4 +34,12 @@ jobs:
             push: false
             tags: cdbuild:latest
 
+        - name: run docker compose multi container
+          working-directory: cicd/task2
+          run: docker compose up -d
+        
+        - name: check if containers functional
+          working-directory: cicd/task2
+          run: docker compose ps
+
           
