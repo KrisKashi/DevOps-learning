@@ -35,4 +35,4 @@ jobs:
         tags: CIbuild:latest
         
     - name: run docker container
-      run: docker run CIbuild:latest     
+      run: docker run cibuild:latest     
