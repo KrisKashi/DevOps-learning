@@ -2,7 +2,8 @@ version: '3.8'
 
 services:
   web:
-    image: flask-redis-app:v1
+    build: .
+    image: flask-redis-app:latest
     expose:
     - "5002"
     environment:
