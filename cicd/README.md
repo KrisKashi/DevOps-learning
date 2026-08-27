@@ -1,6 +1,30 @@
 # CI / CD
 
-This repo contains projects relating to mastering CI/CD fundementals.
+This repo contains projects relating to mastering CI/CD fundamentals.
+
+
+## Project Structure
+```
+DevOps-learning/
+├── .github/
+│   └── workflows/
+│       ├── ci.yml
+│       └── cd-ecr.yml
+├── cicd/
+│   ├── task1/
+│   │   ├── app.py
+│   │   └── Dockerfile
+│   └── task2/
+│       ├── app.py
+│       ├── Dockerfile
+│       ├── docker-compose.yml
+│       └── nginx.conf
+├── media/
+│   ├── FIRSTDEPLOYMENT.png
+│   ├── ECR_SUCCESS_CD.png
+│   └── ECR_IMAGE.png
+└── README.md
+```
 
 ## Topics Covered
 
@@ -24,22 +48,24 @@ This repo contains projects relating to mastering CI/CD fundementals.
 
 ## Projects
 
-# Automated deployment and containerisation of a simple python app
+### Automated deployment and containerisation of a simple python app
 
 - On a push to the repo, this pipeline checks out the code from the python app, lints it using ruff, and upon passing builds and runs a docker image of the application.
 
 this demonstrates the fundemental process of CI/CD, integrating and testing code changes and then updated deployment to a docker image.
 
+![First successful deployment](./media/FIRSTDEPLOYMENT.png)
 
-# Deployment of a docker container to Amazon ECR
+
+### Deployment of a docker container to Amazon ECR
 
 - This project takes an application I built, (Docker compose multi-container visit counter website) , detects changes and lints the python flask app, makes sure the orchestration runs and then builds and deploys the container to amazon ECR for retrival.
-Uses OIDC for seamless short lived authentication with concept of least privledge.
+Uses OIDC for seamless short lived authentication with concept of least priviledge.
 
-[Successful Pipeline run](./media/ECR_SUCCESS_CD.png)
+![Successful Pipeline run](./media/ECR_SUCCESS_CD.png)
 
 
-[Image Uploaded to ECR] (./media/ECR_IMAGE.png)
+![Image Uploaded to ECR](./media/ECR_IMAGE.png)
 
 ## Key learnings
 
@@ -52,7 +78,7 @@ Uses OIDC for seamless short lived authentication with concept of least privledg
 
 # Troubleshooting
 
-- During July 2026 Github pushed an update to AWS ECR OIDC auth, requiring the repository and organisation ID to be provided within the subject claim format. Running the old format, which is referenced in guides would produce an error:
+- During July 2026 Github pushed an update to its own OIDC token auth, requiring the repository and organisation ID to be provided within the subject claim format. Running the old format, which is referenced in guides would produce an error:
 
 `Not authorized to perform sts:AssumeRoleWithWebIdentity`
 
