@@ -46,10 +46,6 @@ jobs:
           working-directory: cicd/task2
           run: docker compose ps
 
-        - name: check variable
-          run: echo ${{ vars.ECR_ROLE }}      
-
-
         - name: Configure AWS credentials
           uses: aws-actions/configure-aws-credentials@v6.2.3
           with:
