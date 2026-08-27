@@ -4,6 +4,10 @@ on:
     push:
     workflow_dispatch:
     pull_request:
+          
+        
+permissions:
+    id-token: write        
 
 jobs:
     build:
@@ -41,5 +45,27 @@ jobs:
         - name: check if containers functional
           working-directory: cicd/task2
           run: docker compose ps
+
+
+        - name: Configure AWS credentials
+          uses: aws-actions/configure-aws-credentials@v6.2.3
+          with:
+            role-to-assume: ${{ vars.ECR_ROLE }}
+            aws-region: eu-west-2
+        
+        - name: Login to ECR
+          id: ecr-login
+          uses: aws-actions/amazon-ecr-login@v2    
+
+        - name: Add/rebuild container to ECR
+          run: |
+            docker build -t $ECR_REGISTRY/flask-docker-cd:latest .
+            docker push $ECR_REGISTRY/flask-docker-cd:latest
+          env:
+            ECR_REGISTRY: ${{ steps.ecr-login.outputs.registry }}      
+
+
+
+
 
           
