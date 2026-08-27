@@ -1,6 +1,10 @@
 name: CI Application Tests
 
-on: [push, pull_request]
+on: 
+  push:
+    paths:
+      - 'cicd/**'
+ 
 
 jobs:
   build:

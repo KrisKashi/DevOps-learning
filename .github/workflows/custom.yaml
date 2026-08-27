@@ -1,6 +1,9 @@
 name: Custom Action CI
 
-on: [push]
+on: 
+  push:
+    paths:
+      - 'cicd/**'
 
 jobs:
     build:
